@@ -250,12 +250,6 @@ grid-row: 12/13;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* #modal-button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-} */
-
 #modal-title {
   font-size: 1.8rem;
   color: orange;
