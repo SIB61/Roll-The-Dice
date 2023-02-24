@@ -127,28 +127,6 @@ grid-row: 12/13;
 }
 
 
-
-#play-button {
-  border: none;
-  color: orange;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  font-size: 1.2rem;
-  /* border-radius: 20px; */
-  cursor: pointer;
-  position: relative;
-  font-weight: bold;
-  border-left: 2px solid rgba(226, 189, 108, 0.8);
-  border-right: 2px solid rgba(226, 189, 108, 0.8);
-  transition:all 0.5s linear; 
-}
-
-#play-button:hover {
-  background-color: orange;
-  color: white;
-}
-
 .box {
   border: 1px rgba(0, 0, 0, 0.1) solid;
   overflow: hidden;
