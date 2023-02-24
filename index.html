@@ -1,206 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-      rel="stylesheet"
-    />
-    <script src="main.js" defer></script>
-    <title>Roll The Dice</title>
-  </head>
-  <body>
-    <main>
-      <div id="game-board">
-        <div class="top-bar">
-          <h1>Roll The Dice</h1>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  <script src="main.js" defer></script>
+  <title>Roll The Dice</title>
+</head>
+
+<body>
+  <main>
+    <div id="game-board">
+      <div class="top-bar">
+        <h1>Roll The Dice</h1>
+        <div>
           <div>
-            <div>
-              Max Attempt: <span id="max-attempt"></span>
-              <span>|| Target Score: <span id="target"></span></span>
-            </div>
+            Max Attempt: <span id="max-attempt"></span>
+            <span>|| Target Score: <span id="target"></span></span>
           </div>
         </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-        </div>
-        <div class="bottom-attempt">
-          Remaining Attempt:
-          <div id="attempt-remaining"></div>
-        </div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+      </div>
+      <div class="bottom-attempt">
+        Remaining Attempt:
+        <div id="attempt-remaining"></div>
+      </div>
 
 
-        <button class="bottom-button" id="play-button">ROLL</button>
+      <!-- <button class="bottom-button" id="play-button">ROLL</button> -->
 
-        <div class="bottom-score">
-          Your Score:
-          <div id="score">0</div>
+
+
+
+
+
+
+      <div class="bottom-score">
+        Your Score:
+        <div id="score">0</div>
+      </div>
+
+      <div class="level">
+        <div id="level">1</div>
+      </div>
+
+
+
+
+    <div class="dice-container">
+
+      <div id="dice" data-side="1">
+        <div class="sides side-1">
+          <span class="dot dot-5"></span>
         </div>
-
-        <div class="level">
-          <div id="level">1</div>
+        <div class="sides side-2">
+          <span class="dot dot-4"></span>
+          <span class="dot dot-6"></span>
+        </div>
+        <div class="sides side-3">
+          <span class="dot dot-4"></span>
+          <span class="dot dot-5"></span>
+          <span class="dot dot-6"></span>
+        </div>
+        <div class="sides side-4">
+          <span class="dot dot-1"></span>
+          <span class="dot dot-3"></span>
+          <span class="dot dot-7"></span>
+          <span class="dot dot-9"></span>
+        </div>
+        <div class="sides side-5">
+          <span class="dot dot-1"></span>
+          <span class="dot dot-3"></span>
+          <span class="dot dot-5"></span>
+          <span class="dot dot-7"></span>
+          <span class="dot dot-9"></span>
+        </div>
+        <div class="sides side-6">
+          <span class="dot dot-1"></span>
+          <span class="dot dot-3"></span>
+          <span class="dot dot-4"></span>
+          <span class="dot dot-6"></span>
+          <span class="dot dot-7"></span>
+          <span class="dot dot-9"></span>
         </div>
       </div>
-      <div id="modal-body" class="hide">
-        <div id="modal">
-          <div id="modal-title"></div>
-          <div id="modal-subtitle"></div>
-          <button id="modal-button"></button>
-        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="modal-body" class="hide">
+      <div id="modal">
+        <div id="modal-title"></div>
+        <div id="modal-subtitle"></div>
+        <button id="modal-button"></button>
       </div>
-    </main>
-  </body>
+    </div>
+
+
+    <!-- dice -->
+
+
+
+    <!-- dice -->
+  </main>
+
+
+
+
+
+
+
+
+</body>
+
 </html>
