@@ -25,48 +25,45 @@ setRemainingAttempt();
 gameView.dice.addEventListener("click", onPlayButtonClick);
 
 function onPlayButtonClick() {
-  gameView.dice.style.pointerEvents = 'none'
+  gameView.dice.style.pointerEvents = "none";
   const randomNumber = Math.ceil(Math.random() * 5);
   dice.dataset.side = randomNumber;
   dice.classList.toggle("roll");
   console.log(dice.dataset, randomNumber);
   setTimeout(() => {
-    console.log("dkls")
+    console.log("dkls");
     makeAttempt();
-    checkResult(randomNumber)
-    setTimeout(()=>{
-          gameView.dice.style.pointerEvents = 'auto'
-    },200*randomNumber)
+    checkResult(randomNumber);
+    const timeoutDuration =
+      randomNumber + game.score > game.target ? 0 : 200 * randomNumber;
+    setTimeout(() => {
+      gameView.dice.style.pointerEvents = "auto";
+    }, timeoutDuration);
   }, 1500);
 }
 
 function checkResult(randomNumber) {
-    const newScore = game.score + randomNumber;
-    if (newScore <= game.target) {
-      addCircle(randomNumber);
-      countScore(randomNumber);
-      if (newScore == game.target) {
-        setTimeout(() => {
-          showPopup(
-            "Well Played! Win Win Win!",
-            `Target achieved with ${
-              game.maxAttempt - game.attemptCount
-            } attempts remaining`,
-            "Next Level"
-          );
-          levelUp();
-        }, 200 * (randomNumber + 1));
-      }
+  const newScore = game.score + randomNumber;
+  if (newScore <= game.target) {
+    addCircle(randomNumber);
+    countScore(randomNumber);
+    if (newScore == game.target) {
+      setTimeout(() => {
+        showPopup(
+          "Well Played! Win Win Win!",
+          `Target achieved with ${
+            game.maxAttempt - game.attemptCount
+          } attempts remaining`,
+          "Next Level"
+        );
+        levelUp();
+      }, 200 * (randomNumber + 1));
     }
-    if (game.attemptCount >= game.maxAttempt && newScore != game.target) {
-      showPopup(
-        "Unfortunate! Try Again",
-        "Better luck next time",
-        "Play Again"
-      );
-    }
+  }
+  if (game.attemptCount >= game.maxAttempt && newScore != game.target) {
+    showPopup("Unfortunate! Try Again", "Better luck next time", "Play Again");
+  }
 }
-
 
 gameView.modalButton.addEventListener("click", (e) => {
   toggleModal();
